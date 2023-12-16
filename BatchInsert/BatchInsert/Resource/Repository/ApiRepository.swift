@@ -6,6 +6,7 @@ protocol ApiBaseRepository {
 
 protocol ApiCoreDataRepository: ApiBaseRepository {
     func insertApiRecords(records: Array<Api>) -> Bool
+    func batchInsertApiRecords(records: Array<Api>) -> Bool
 }
 
 protocol RestApiResourceRepository: ApiBaseRepository {

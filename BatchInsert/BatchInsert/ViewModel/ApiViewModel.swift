@@ -16,7 +16,7 @@ struct ApiViewModel {
                 restApiRepository.getApiRecords { apiResponse in
                     if(apiResponse != nil && apiResponse?.count != 0) {
                         // Insert in core data
-                        _ = cdApiDataRepository.insertApiRecords(records: apiResponse!)
+                        _ = cdApiDataRepository.batchInsertApiRecords(records: apiResponse!)
                         completionHandler(apiResponse)
                     }
                 }
